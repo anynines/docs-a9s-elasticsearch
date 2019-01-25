@@ -36,6 +36,11 @@ The current version of a9s Elasticsearch for PCF includes the following key feat
 | **Service Dashboard** | The Service Dashboard provides single sign on and lets the user easily trigger backups. |
 | **New Elasticsearch Versions** | Added a9s Elasticsearch v5 and v6 |
 | **Default Syslog Endpoints for Instances** | In the tile, a default endpoint for syslog and Graphite can be configured for each service instance created by the user. |
+| **Consul Domain configurable** | The consul domain can now be configured. |
+| **BOSH DNS Handler** | a9s BOSH DNS handler added to make a9s service instances accessible from diego cells. |
+| **a9s-pg Backup** | Added backup option for a9s-pg. |
+| **Instance Sharing** | a9s MySQL no supports instance sharing between orgs an spaces, see [documentation](https://docs.pivotal.io/pivotalcf/2-4/devguide/services/sharing-instances.html). |
+| **Update Xenial** | Update to ubuntu xenial stemcells. |
 
 ### <a id='video'></a> Video Overview of a9s Elasticsearch for PCF
 
@@ -58,19 +63,19 @@ The following table provides version and version-support information about a9s E
     <th>Details</th>
     <tr>
         <td>Version</td>
-        <td>v2.0.2</td>
+        <td>v2.1.0</td>
     </tr>
     <tr>
         <td>Release date</td>
-        <td>September 4, 2018</td>
+        <td>February 14, 2019</td>
     </tr>
     <tr>
       <td>Compatible Ops Manager version(s)</td>
-      <td>v1.12.x, v2.0.x, v2.1.x, and v2.2.x</td>
+      <td>v2.1.x, v2.2.x, v2.3.x, and v2.4.x</td>
   </tr>
   <tr>
       <td>Compatible Pivotal Application Service version(s):</td>
-      <td>v1.12.x, v2.0.x, v2.1.x, and v2.2.x</td>
+      <td>v2.1.x, v2.2.x, v2.3.x, and v2.4.x</td>
     </tr>
     <tr>
         <td>IaaS support</td>
@@ -78,14 +83,11 @@ The following table provides version and version-support information about a9s E
     </tr>
 </table>
 
-<p class='note'><strong>Note:</strong> This is a major release. Upgrades from a9s Elasticsearch for PCF v1.x are not supported. If you previously installed a9s Elasticsearch for PCF v1.x, uninstall it and install the latest version.</p>
-
-
 ## <a id="reqs"></a> Requirements
 
 To install and use a9s Elasticsearch for PCF, you must install the following products and tiles:
 
-* Pivotal Application Service (formerly Elastic Runtime) v1.12 or later
+* Pivotal Application Service (formerly Elastic Runtime) v2.1.x or later
 
 For more information, see [Installing and Configuring a9s Elasticsearch for PCF](./installing.html).
 
