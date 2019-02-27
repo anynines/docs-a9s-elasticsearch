@@ -1,0 +1,41 @@
+---
+title: Usage Data Report
+owner: Partners
+---
+
+This topic describes how to retrieve the usage data from the a9s Data Service Broker.
+
+## Obtain Service Broker Credentials
+
+1. Navigate to the **Status** tab of the tile and record the IP address of one
+  of the a9s Service Broker instances.
+
+  <%= image_tag("status_tab.png", width: 300) %>
+
+2. On the **Credentials** tab, find the credentials of the service under **Service Broker Password**.
+  The username is `admin`.
+
+  <%= image_tag("service-broker-credentials.png", width: 300) %>
+
+## Downlad the a9s Tool
+
+The a9s tool is used to download the usage data from the a9s Data Service Broker.
+
+1. Download the a9s tool.
+
+  ```bash
+  $ wget https://s3.eu-central-1.amazonaws.com/anynines-binaries/a9s-linux-amd64-1.0.0 -O a9s
+  ```
+
+2. Make it executable.
+  ```bash
+  chmod +x a9s
+  ````
+
+## Download the Usage Data
+
+To download the usage data execute the following command.
+
+```bash
+./a9s download-usage-data http://admin:<PASSWORD>@172.28.10.23:3000 usagedata.zip
+```
