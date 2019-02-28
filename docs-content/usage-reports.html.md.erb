@@ -21,7 +21,8 @@ This topic describes how to retrieve the usage data from the a9s Data Service Br
 
 The a9s tool is used to download the usage data from the a9s Data Service Broker.
 
-1. Download the a9s tool.
+1. Download the a9s tool from [here for Linux](https://s3.eu-central-1.amazonaws.com/anynines-binaries/a9s-linux-amd64-1.0.0)
+  and [here for MacOS](https://s3.eu-central-1.amazonaws.com/anynines-binaries/a9s-darwin-amd64-1.0.0).
 
   ```bash
   $ wget https://s3.eu-central-1.amazonaws.com/anynines-binaries/a9s-linux-amd64-1.0.0 -O a9s
@@ -34,21 +35,21 @@ The a9s tool is used to download the usage data from the a9s Data Service Broker
 
 ## Download the Usage Data
 
-To download the usage data execute the following command.
+To download the usage data from the service broker execute the following command.
 
 ```bash
-./a9s download-usage-data http://admin:<PASSWORD>@172.28.10.23:3000 usagedata.zip
+./a9s download-usage-data http://admin:<PASSWORD>@<IP_ADDRESS>:3000 usagedata.zip
 ```
 
 ## Upload the Usage Data to a9s
 
-TO upload the Usage Data, you can visit https://usage-report.anynines.com/
-Here is a Form you can send us the Usage Data.
+To upload the usage data you can visit https://usage-report.anynines.com/.
+Here you find a form you can upload the usage data.
 
-If you want to send the data via CLI you can use following command:
+If you want to upload the usage data via `curl` you can use following command:
 
 ```bash
-curl -F "report[file]=@usagedata.zip"  https://usage-report.anynines.com/reports --request POST 
+curl -F "report[file]=@usagedata.zip" https://usage-report.anynines.com/reports -X POST
 ```
 
 
