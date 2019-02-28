@@ -39,3 +39,16 @@ To download the usage data execute the following command.
 ```bash
 ./a9s download-usage-data http://admin:<PASSWORD>@172.28.10.23:3000 usagedata.zip
 ```
+
+## Upload the Usage Data to a9s
+
+TO upload the Usage Data, you can visit https://usage-report.anynines.com/
+Here is a Form you can send us the Usage Data.
+
+If you want to send the data via CLI you can use following command:
+
+```bosh
+curl -F "report[file]=@usagedata.zip"  https://usage-report.anynines.com/reports --request POST 
+```
+
+
